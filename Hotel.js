@@ -1,88 +1,115 @@
-	// O código é todo modulado por funções para permitir uma organização melhor. 
+	// 1ª parte
 
-		// Uma lista de exemplo que podemos usar sem ter que informar usuários sempre.
-		//var lista_hospedes = ["Gabriel Augusto", "Roberto Gómez Bolaños", "María Antonieta de las Nieves", "Hector Bonilha", "Carlos Villagrán", "Ramón Valdés"];
+	var lista_hospedes = ["Gabriel Augusto", "Roberto Gómez Bolaños", "María Antonieta de las Nieves", "Hector Bonilha", "Carlos Villagrán", "Ramón Valdés"];
+	var nome_hotel
+	var nome
 
-		var lista_hospedes = ["Gabriel Augusto", "Roberto Gómez Bolaños", "María Antonieta de las Nieves", "Hector Bonilha", "Carlos Villagrán", "Ramón Valdés"];
+	const senhaCorreta = "2678";
 
-		function sistema_cadastrar_hospedes() {
+	function login() {
 
-			var escolha_hospedes = parseInt(prompt(
-				'Cadastro de Hóspedes\n\n Selecione uma opção: \n1. Cadastrar \n2. Pesquisar \n3. Listar \n4. Sair'));
+		var nome_hotel = prompt("insira o nome do hotel:");
+		alert(`O nome do hotel é ${nome_hotel}`);
 
-			if (escolha_hospedes === 1) {
-				cadastrar_hospedes();
-			} else if (escolha_hospedes === 2) {
-				pesquisar_hospedes();
-			} else if (escolha_hospedes === 3) {
-				listar_todos_hospedes();
-			} else if (escolha_hospedes === 4) {
-				
-			} else {
-				erro_pesquisar_hospedes();
-			}
+		var nome = prompt("insira seu nome:");
+		alert(`Seu nome é:  ${nome} `);
 
+		var senha = prompt("Digite sua senha:");
+		if (senha !== senhaCorreta) {
+			alert("Senha incorreta. Tente novamente.");
+			return; // Saia da função em caso de senha incorreta
+		} else {
+			alert(`Bem vindo ${nome}`);
 		}
 
+	}
 
-		function cadastrar_hospedes() {
-			// lenght é uma propriedade que retorna a quantidade de itens dentro do array. 
-			// length = comprimento - extensão - quantidade
-			if (lista_hospedes.length >= 15) {
-				alert("Número máximo de hóspedes cadastrados.");
-			} else {
-				let nome_hospede = prompt('Por favor, informe o nome da(o) hóspede:');
+	//2ª parte
 
-				// O método push() permite adicionar um item ao Array/Vetor. Importante dizer que ele adiciona o elemento ao final do Array/Vetor.
-				lista_hospedes.push(nome_hospede);
-				console.log(lista_hospedes); // O console é usado apenas para exibir ao desenvolvedor todo mundo que já está cadastrado.
-				alert("Sucesso! Hóspede " + nome_hospede + " foi cadastrada(o) com sucesso!\n");
-			}
 
-			sistema_cadastrar_hospedes();
+
+
+
+
+
+	function sistema_cadastrar_hospedes() {
+
+		var escolha_hospedes = parseInt(prompt(
+			'Cadastro de Hóspedes\n\n Selecione uma opção: \n1. Cadastrar \n2. Pesquisar \n3. Listar \n4. Sair'));
+
+		if (escolha_hospedes === 1) {
+			cadastrar_hospedes();
+		} else if (escolha_hospedes === 2) {
+			pesquisar_hospedes();
+		} else if (escolha_hospedes === 3) {
+			listar_todos_hospedes();
+		} else if (escolha_hospedes === 4) {
+
+		} else {
+			erro_pesquisar_hospedes();
 		}
 
-		function pesquisar_hospedes() {
-			let nome_hospede = prompt('Por favor, informe o nome da(o) hóspede para pesquisa:');
-			// O método includes() procura por um elemento dentro do Array e retorna verdadeiro ou falso. Caso queira comparar números, o mais indicado é o método find();
-			if (lista_hospedes.includes(nome_hospede)) {
-				alert(nome_hospede + ' encontrada(o).');
-			} else {
-				alert(nome_hospede + ' não foi encontrada(o).');
-			}
-
-			sistema_cadastrar_hospedes();
-		}
-
-		function listar_todos_hospedes() {
-			//ForEach é um método especial que aplica uma função específica para todos os elementos dentro de um array.
-			lista_hospedes.forEach(para_cada_item); //Para cada
-
-			//Utilizando um laço for
-			/* for (let i = 0; i < lista_hospedes.length; i++) {
-				alert("O Hóspede " + lista_hospedes[i] + " ocupa a posição " + i);
-			} 
-
-			//Utilizando um laço while
-			var i = 0; 
-			while(i < lista_hospedes.length) {
-				alert("O Hóspede " + lista_hospedes[i] + " ocupa a posição " + i);
-				i++;
-			}*/ 			
-
-			sistema_cadastrar_hospedes();
-		}
-
-		//Função feita para trabalhar com os arrays. Já vem com os parâmetros pré-definidos. 
-		function para_cada_item(value, index) {
-			var posicao = index + 1;
-			alert("O Hóspede " + value + " ocupa a posição " + posicao);
-		}
+	}
 
 
-		function erro_pesquisar_hospedes() {
-			alert('Por favor, informe um número entre 1 e 4');
-			sistema_cadastrar_hospedes();
+	function cadastrar_hospedes() {
+		// lenght é uma propriedade que retorna a quantidade de itens dentro do array. 
+		// length = comprimento - extensão - quantidade
+		if (lista_hospedes.length >= 15) {
+			alert("Número máximo de hóspedes cadastrados.");
+		} else {
+			let nome_hospede = prompt('Por favor, informe o nome da(o) hóspede:');
+
+			// O método push() permite adicionar um item ao Array/Vetor. Importante dizer que ele adiciona o elemento ao final do Array/Vetor.
+			lista_hospedes.push(nome_hospede);
+			console.log(lista_hospedes); // O console é usado apenas para exibir ao desenvolvedor todo mundo que já está cadastrado.
+			alert("Sucesso! Hóspede " + nome_hospede + " foi cadastrada(o) com sucesso!\n");
 		}
 
 		sistema_cadastrar_hospedes();
+	}
+
+	function pesquisar_hospedes() {
+		let nome_hospede = prompt('Por favor, informe o nome da(o) hóspede para pesquisa:');
+		// O método includes() procura por um elemento dentro do Array e retorna verdadeiro ou falso. Caso queira comparar números, o mais indicado é o método find();
+		if (lista_hospedes.includes(nome_hospede)) {
+			alert(nome_hospede + ' encontrada(o).');
+		} else {
+			alert(nome_hospede + ' não foi encontrada(o).');
+		}
+
+		sistema_cadastrar_hospedes();
+	}
+
+	function listar_todos_hospedes() {
+		//ForEach é um método especial que aplica uma função específica para todos os elementos dentro de um array.
+		lista_hospedes.forEach(para_cada_item); //Para cada
+
+		//Utilizando um laço for
+		/* for (let i = 0; i < lista_hospedes.length; i++) {
+			alert("O Hóspede " + lista_hospedes[i] + " ocupa a posição " + i);
+		} 
+
+		//Utilizando um laço while
+		var i = 0; 
+		while(i < lista_hospedes.length) {
+			alert("O Hóspede " + lista_hospedes[i] + " ocupa a posição " + i);
+			i++;
+		}*/
+
+		sistema_cadastrar_hospedes();
+	}
+
+	//Função feita para trabalhar com os arrays. Já vem com os parâmetros pré-definidos. 
+	function para_cada_item(value, index) {
+		var posicao = index + 1;
+		alert("O Hóspede " + value + " ocupa a posição " + posicao);
+	}
+
+
+	function erro_pesquisar_hospedes() {
+		alert('Por favor, informe um número entre 1 e 4');
+		sistema_cadastrar_hospedes();
+	}
+
+	sistema_cadastrar_hospedes();
