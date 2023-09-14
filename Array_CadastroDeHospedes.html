@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+	<meta charset="utf-8">
+	<title>Cadastro de Hóspedes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+		// O código é todo modulado por funções para permitir uma organização melhor. 
+
+		// Uma lista de exemplo que podemos usar sem ter que informar usuários sempre.
+		//var lista_hospedes = ["Gabriel Augusto", "Roberto Gómez Bolaños", "María Antonieta de las Nieves", "Hector Bonilha", "Carlos Villagrán", "Ramón Valdés"];
+
+		var lista_hospedes = ["Gabriel Augusto", "Roberto Gómez Bolaños", "María Antonieta de las Nieves", "Hector Bonilha", "Carlos Villagrán", "Ramón Valdés"];
+
+		function sistema_cadastrar_hospedes() {
+
+			var escolha_hospedes = parseInt(prompt(
+				'Cadastro de Hóspedes\n\n Selecione uma opção: \n1. Cadastrar \n2. Pesquisar \n3. Listar \n4. Sair'));
+
+			if (escolha_hospedes === 1) {
+				cadastrar_hospedes();
+			} else if (escolha_hospedes === 2) {
+				pesquisar_hospedes();
+			} else if (escolha_hospedes === 3) {
+				listar_todos_hospedes();
+			} else if (escolha_hospedes === 4) {
+				
+			} else {
+				erro_pesquisar_hospedes();
+			}
+
+		}
+
+
+		function cadastrar_hospedes() {
+			// lenght é uma propriedade que retorna a quantidade de itens dentro do array. 
+			// length = comprimento - extensão - quantidade
+			if (lista_hospedes.length >= 15) {
+				alert("Número máximo de hóspedes cadastrados.");
+			} else {
+				let nome_hospede = prompt('Por favor, informe o nome da(o) hóspede:');
+
+				// O método push() permite adicionar um item ao Array/Vetor. Importante dizer que ele adiciona o elemento ao final do Array/Vetor.
+				lista_hospedes.push(nome_hospede);
+				console.log(lista_hospedes); // O console é usado apenas para exibir ao desenvolvedor todo mundo que já está cadastrado.
+				alert("Sucesso! Hóspede " + nome_hospede + " foi cadastrada(o) com sucesso!\n");
+			}
+
+			sistema_cadastrar_hospedes();
+		}
+
+		function pesquisar_hospedes() {
+			let nome_hospede = prompt('Por favor, informe o nome da(o) hóspede para pesquisa:');
+			// O método includes() procura por um elemento dentro do Array e retorna verdadeiro ou falso. Caso queira comparar números, o mais indicado é o método find();
+			if (lista_hospedes.includes(nome_hospede)) {
+				alert(nome_hospede + ' encontrada(o).');
+			} else {
+				alert(nome_hospede + ' não foi encontrada(o).');
+			}
+
+			sistema_cadastrar_hospedes();
+		}
+
+		function listar_todos_hospedes() {
+			//ForEach é um método especial que aplica uma função específica para todos os elementos dentro de um array.
+			lista_hospedes.forEach(para_cada_item); //Para cada
+
+			//Utilizando um laço for
+			/* for (let i = 0; i < lista_hospedes.length; i++) {
+				alert("O Hóspede " + lista_hospedes[i] + " ocupa a posição " + i);
+			} 
+
+			//Utilizando um laço while
+			var i = 0; 
+			while(i < lista_hospedes.length) {
+				alert("O Hóspede " + lista_hospedes[i] + " ocupa a posição " + i);
+				i++;
+			}*/ 			
+
+			sistema_cadastrar_hospedes();
+		}
+
+		//Função feita para trabalhar com os arrays. Já vem com os parâmetros pré-definidos. 
+		function para_cada_item(value, index) {
+			var posicao = index + 1;
+			alert("O Hóspede " + value + " ocupa a posição " + posicao);
+		}
+
+
+		function erro_pesquisar_hospedes() {
+			alert('Por favor, informe um número entre 1 e 4');
+			sistema_cadastrar_hospedes();
+		}
+
+		sistema_cadastrar_hospedes();
+	</script>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">Membros de TURMA 5 - TIT - INTERFACES/HTML/CSS - 9900273953 - 0010 - 07811</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
+<mso:SharedWithUsers msdt:dt="string">67;#Membros de TURMA 5 - TIT - INTERFACES/HTML/CSS - 9900273953 - 0010 - 07811</mso:SharedWithUsers>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+</body>
+
+</html>
