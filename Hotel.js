@@ -1,132 +1,130 @@
-	// 1ª parte: boas vindas ao usuário e verificação da senha de acesso
+// 1ª parte: boas vindas ao usuário e verificação da senha de acesso
 
-	var lista_hospedes = ["Gabriel Augusto", "Roberto Gómez Bolaños", "María Antonieta de las Nieves", "Hector Bonilha", "Carlos Villagrán", "Ramón Valdés"];
+var lista_hospedes = [
+  "Guilherme Cruz",
+  "Davi Farias",
+  "Gabriel Fraco",
+  "Adryan André",
+  "Guilherme Alefe",
+  "Brian Lima",
+  "Samuel Conceição",
+  "Gustavo Silva",
+];
 
-	var nome_hotel
+var nome_hotel;
 
-	var nome
+var nome;
 
-	const senhaCorreta = "2678";
+const senhaCorreta = "2678";
 
-	function login() {
+function login() {
+  var nome_hotel = prompt("insira o nome do hotel:");
+  alert(`O nome do hotel é ${nome_hotel}`);
 
-		var nome_hotel = prompt("insira o nome do hotel:");
-		alert(`O nome do hotel é ${nome_hotel}`);
+  var nome = prompt("insira seu nome:");
 
-		var nome = prompt("insira seu nome:");
+  var senha = prompt("Digite sua senha:");
+  if (senha !== senhaCorreta) {
+    alert("Senha incorreta. Tente novamente.");
+    return; // Saia da função em caso de senha incorreta
+  } else {
+    inicio();
+  }
+}
 
-		var senha = prompt("Digite sua senha:");
-		if (senha !== senhaCorreta) {
-			alert("Senha incorreta. Tente novamente.");
-			return; // Saia da função em caso de senha incorreta
-		} else {
-			inicio();
-		}
+//2ª parte: função inicio e as opções do swich case
 
-	}
+function inicio() {
+  alert(
+    `Bem vindo ao Hotel ${nome_hotel}, ${nome}. É um imenso prazer ter você por aqui!`
+  );
 
-	//2ª parte: função inicio e as opções do swich case
+  while (true) {
+    // adicionar todos os nomes no menu
 
-	function inicio() {
+    var menu = parseInt(
+      prompt(
+        "Escolha uma opção:\n" +
+          "1- opção\n" +
+          "2- opção\n" +
+          "3- opção\n" +
+          "4. opção\n" +
+          "5. opção\n" +
+          "6. opção\n" +
+          "7. opção\n" +
+          "8. opção\n" +
+          "9. opção\n" +
+          "10. opção\n" +
+          "11. opção\n" +
+          "12. opção\n" +
+          "13. opção\n" +
+          "14. Sair"
+      )
+    );
 
-		alert(`Bem vindo ao Hotel ${nome_hotel}, ${nome}. É um imenso prazer ter você por aqui!`);
+    switch (menu) {
+      case 1:
+        reserva_diaria();
+        break;
+      case 2:
+        var_2();
+        break;
+      case 3:
+        var_3();
+        break;
+      case 4:
+        var_4();
+        break;
+      case 5:
+        var_5();
+        break;
+      case 6:
+        var_6();
+        break;
+      case 7:
+        var_7();
+        break;
+      case 8:
+        var_8();
+        break;
+      case 9:
+        var_9();
+        break;
+      case 10:
+        var_10();
+        break;
+      case 11:
+        var_11();
+        break;
+      case 12:
+        var_12();
+        break;
+      case 13:
+        var_13();
+        break;
+      case 14:
+        sair();
+        break;
+      default:
+        erro();
+    }
+  }
+}
 
+// 3ªparte: definir funções do switch case
 
-		while (true) {
+function reserva_diaria() {}
 
-			// adicionar todos os nomes no menu
+function erro() {
+  alert("Por favor, informe um número entre 1 e 14.");
+}
 
-			var menu = parseInt(
-				prompt(
-					"Escolha uma opção:\n" +
-					"1. reservas e diárias\n" +
-					"2. opção\n" +
-					"3. opção\n" +
-					"4. opção\n" +
-					"5. opção\n" +
-					"6. opção\n" +
-					"7. opção\n" +
-					"8. opção\n" +
-					"9. opção\n" +
-					"10. opção\n" +
-					"11. opção\n" +
-					"12. opção\n" +
-					"13. opção\n" +
-					"14. Sair"
-				)
-			);
+function sair() {
+  alert(`Muito obrigado e até logo, ${nome}.`);
+  window.close();
+}
 
-
-
-			switch (menu) {
-				case 1:
-					reserva_diaria();
-					break;
-				case 2:
-					var_2();
-					break;
-				case 3:
-					var_3();
-					break;
-				case 4:
-					var_4();
-					break;
-				case 5:
-					var_5();
-					break;
-				case 6:
-					var_6();
-					break;
-				case 7:
-					var_7();
-					break;
-				case 8:
-					var_8();
-					break;
-				case 9:
-					var_9();
-					break;
-				case 10:
-					var_10();
-					break;
-				case 11:
-					var_11();
-					break;
-				case 12:
-					var_12();
-					break;
-				case 13:
-					var_13();
-					break;
-				case 14:
-					sair();
-					break;
-				default:
-					erro();
-			}
-		}
-	}
-
-	// 3ªparte: definir funções do switch case
-
-	function reserva_diaria() {
-		
-	}
-
-	function erro() {
-		alert("Por favor, informe um número entre 1 e 14.");
-	}
-
-	function sair() {
-		alert(`Muito obrigado e até logo, ${nome}.`);
-		window.close();
-	}
-
-
-
-
-
-	/* function sistema_cadastrar_hospedes() {
+/* function sistema_cadastrar_hospedes() {
 
 			var escolha_hospedes = parseInt(prompt(
 				'Cadastro de Hóspedes\n\n Selecione uma opção: \n1. Cadastrar \n2. Pesquisar \n3. Listar \n4. Sair'));
@@ -209,3 +207,30 @@
 		}
 
 		 sistema_cadastrar_hospedes();  */
+
+		 var definirValorDiaria = parseFloat(prompt("Qual o valor da diária?"));
+
+		 if (isNaN(definirValorDiaria) || definirValorDiaria <= 0) {
+		   alert("Valor da diária inválido.");
+		   return;
+		 }
+		 
+		 var diasEstadia = parseFloat(prompt("Quantos dias de estadia?"));
+		 
+		 if (isNaN(diasEstadia) || diasEstadia <= 0) {
+		   alert("Valor de dias de estadia inválido.");
+		   return;
+		 }
+		 
+		 if (diasEstadia >= 30) {
+		   alert("Limite de dias excedido. Use um valor menor que 30.");
+		   return;
+		 }
+		 
+		 var custoFinalEstadia = diasEstadia * definirValorDiaria;
+		 alert("O custo total da estadia é: R$" + custoFinalEstadia);
+
+// aqui poderia ser uma function para chamar a area de cadastro de usuario ATT
+
+
+

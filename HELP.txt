@@ -1,0 +1,54 @@
+  Aqui está a sintaxe básica do switch...case em JavaScript:
+
+  javascript
+
+  switch (expressao) {
+    case valor1:
+      // Bloco de código a ser executado se a expressão for igual a valor1
+      break;
+    case valor2:
+      // Bloco de código a ser executado se a expressão for igual a valor2
+      break;
+    // Outros casos...
+    default:
+      // Bloco de código a ser executado se nenhum dos casos anteriores corresponder
+  }
+  ```
+  
+  Aqui estão alguns exemplos de uso do `switch...case`:
+  
+  ```javascript
+  var diaDaSemana = 3;
+  
+  switch (diaDaSemana) {
+    case 1:
+      console.log('Segunda-feira');
+      break;
+    case 2:
+      console.log('Terça-feira');
+      break;
+    case 3:
+      console.log('Quarta-feira');
+      break;
+    case 4:
+      console.log('Quinta-feira');
+      break;
+    case 5:
+      console.log('Sexta-feira');
+      break;
+    case 6:
+      console.log('Sábado');
+      break;
+    case 7:
+      console.log('Domingo');
+      break;
+    default:
+      console.log('Dia inválido');
+  }
+  ```
+  
+  Neste exemplo, o `switch` avalia a variável `diaDaSemana` e executa o bloco de código correspondente ao valor da variável.
+  
+  É importante notar que após a execução de um bloco de código, você deve usar a instrução `break` para sair do `switch`, caso contrário, a execução continuará nos casos seguintes até encontrar um `break` ou até o final do `switch`. O `default` é opcional e é executado quando nenhum dos casos anteriores corresponde à expressão.
+
+  

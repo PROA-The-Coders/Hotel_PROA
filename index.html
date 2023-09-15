@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Estadia</title>
+</head>
+
+<body>
+    <script>
+        var continuar = true;
+
+        while (continuar) {
+            estadiaCalc();
+            var resposta = prompt("Deseja calcular o custo de outra estadia? (sim / não)");
+
+            if (resposta.toLowerCase() !== "sim") {
+                continuar = false;
+            }
+        }
+
+        function estadiaCalc() {
+            var definirValorDiaria = parseFloat(prompt("Qual o valor da diária?"));
+
+            if (isNaN(definirValorDiaria) || definirValorDiaria <= 0) {
+                alert("Valor da diária inválido. Por favor, insira um valor válido.");
+                return;
+            }
+
+            var diasEstadia = parseFloat(prompt("Quantos dias de estadia?"));
+
+            if (isNaN(diasEstadia) || diasEstadia <= 0) {
+                alert("Valor de dias de estadia inválido. Por favor, insira um valor válido.");
+                return;
+            }
+
+            if (diasEstadia >= 30) {
+                alert("Limite de dias excedido. Use um valor menor que 30.");
+                return;
+            }
+
+            var custoFinalEstadia = diasEstadia * definirValorDiaria;
+            alert("O custo total da estadia é: R$" + custoFinalEstadia);
+        }
+    </script>
+</body>
+
+</html>
