@@ -22,11 +22,11 @@ Nossa interface de hotel incluirá:
 
 ## Contribuição
 
-Estamos empolgados em compartilhar nosso progresso e código-fonte neste repositório. Fique à vontade para explorar, contribuir ou deixar comentários. Este é apenas o começo de nossa jornada emocionante na programação e desenvolvimento de interfaces! 🚀
+Estamos empolgados em compartilhar nosso progresso e código-fonte neste repositório. Fique à vontade para explorar, contribuir ou deixar comentários. Este é apenas o começo de nossa jornada na programação e desenvolvimento de interfaces! 🚀
 
 ## Agradecimentos
 
-Agradecemos ao Professor Gabriel por nos inspirar e orientar neste projeto. Esperamos que nossa interface para hotel ajude a tornar a experiência de hospedagem ainda mais especial para os futuros hóspedes.
+Agradecemos ao Professor Gabriel por nos inspirar e orientar. Esperamos que nosso projeto ajude a tornar a experiência de hospedagem ainda mais especial para os futuros hóspedes.
 
 # colaboradores
 
@@ -39,7 +39,7 @@ Agradecemos ao Professor Gabriel por nos inspirar e orientar neste projeto. Espe
 
 ## Fique Ligado!
 
-Fique ligado para atualizações e novidades emocionantes enquanto continuamos a trabalhar neste projeto incrível. ✨
+Fique ligado para atualizações e novidades enquanto continuamos a trabalhar neste projeto incrível. ✨
 
 Obrigado por visitar nosso repositório!
 <!--Para alinhar as imagens e os nomes de usuário lado a lado em um arquivo README.md, você pode usar a sintaxe de tabela do Markdown. Aqui está um exemplo de como você pode fazer isso:
