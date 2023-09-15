@@ -1,5 +1,32 @@
-# Hotel_PROA
-CHAT-GPT... vai escrever alguma coisa
+# Projeto de Interface para Hotel 🏨
+
+Olá, pessoal! Este é o repositório do projeto incrível que estamos desenvolvendo como parte das aulas do Professor Gabriel no Instituto Proa. Nosso talentoso time de desenvolvedores é composto por:
+
+- Gabriel Franco 👨‍💻
+- Samuel Conceição 🧑‍💻
+- Brian Matos 🧑‍💻
+- Adryan André 👨‍💻
+- Davi Farias 🧑‍💻
+
+Juntos, transformamos uma atividade em um emocionante projeto! Estamos criando uma interface para um hotel que não apenas exibe informações sobre os quartos, mas também oferece uma série de outras funcionalidades incríveis. 🌟
+
+## Funcionalidades Principais
+
+Nossa interface de hotel incluirá:
+
+- 🛏️ Visualização detalhada dos quartos disponíveis.
+- 🍽️ Informações sobre os serviços de restaurante.
+- 🏊‍♂️ Acesso às comodidades do spa e da piscina.
+- 📅 Reservas e disponibilidade de quartos.
+- 🌆 Dicas e informações turísticas sobre a região.
+
+## Contribuição
+
+Estamos empolgados em compartilhar nosso progresso e código-fonte neste repositório. Fique à vontade para explorar, contribuir ou deixar comentários. Este é apenas o começo de nossa jornada emocionante na programação e desenvolvimento de interfaces! 🚀
+
+## Agradecimentos
+
+Agradecemos ao Professor Gabriel por nos inspirar e orientar neste projeto. Esperamos que nossa interface para hotel ajude a tornar a experiência de hospedagem ainda mais especial para os futuros hóspedes.
 
 # colaboradores
 
@@ -10,7 +37,11 @@ CHAT-GPT... vai escrever alguma coisa
 | :---: | :---: | :---: | :---: | :---: |
 | Gabriel Franco | Samuel Conceição | Brian Matos | Adryan André | Davi Farias |
 
+## Fique Ligado!
 
+Fique ligado para atualizações e novidades emocionantes enquanto continuamos a trabalhar neste projeto incrível. ✨
+
+Obrigado por visitar nosso repositório!
 <!--Para alinhar as imagens e os nomes de usuário lado a lado em um arquivo README.md, você pode usar a sintaxe de tabela do Markdown. Aqui está um exemplo de como você pode fazer isso:
 
 markdown
