@@ -1,4 +1,4 @@
-	// 1ª parte
+	// 1ª parte: boas vindas ao usuário e verificação da senha de acesso
 
 	var lista_hospedes = ["Gabriel Augusto", "Roberto Gómez Bolaños", "María Antonieta de las Nieves", "Hector Bonilha", "Carlos Villagrán", "Ramón Valdés"];
 
@@ -25,7 +25,7 @@
 
 	}
 
-	//2ª parte
+	//2ª parte: função inicio e as opções do swich case
 
 	function inicio() {
 
@@ -33,6 +33,8 @@
 
 
 		while (true) {
+
+			// adicionar todos os nomes no menu
 
 			var menu = parseInt(
 				prompt(
@@ -105,7 +107,8 @@
 		}
 	}
 
-	// 3ªparte
+	// 3ªparte: definir funções do switch case
+
 	function reserva_diaria() {
 		
 	}
