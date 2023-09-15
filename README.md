@@ -9,6 +9,7 @@ Olá, pessoal! Este é o repositório do projeto incrível que estamos desenvolv
 - Davi Farias 🧑‍💻
 - Gustavo Silva 🧑‍💻
 - Guilherme Alefe 🧑‍💻
+- Guilherme Cruz 🧑‍💻
 
 Juntos, transformamos uma atividade em um emocionante projeto! Estamos criando uma interface para um hotel que não apenas exibe informações sobre os quartos, mas também oferece uma série de outras funcionalidades incríveis. 🌟
 
@@ -35,9 +36,9 @@ Agradecemos ao Professor Gabriel por nos inspirar e orientar. Esperamos que noss
 
 <!--Quando fizer aquele projeto em grupo ou receber alguma Pull Request como contribuição destaque-os. Uma coisa bem bacana aqui é misturar imagens com tabelas: -->
 
-| [<img src="https://avatars.githubusercontent.com/u/89610183?s=400&u=e0a910f1089b47ec21e23fb01ea1d32d12e7e288&v=4" width=115 > <br> <sub> GabrieloFranco </sub>](https://github.com/GabrieloFranco) | [<img src="https://avatars.githubusercontent.com/u/142240522?s=400&v=4" width=115 > <br> <sub> SamDevFocus </sub>](https://github.com/SamDevFocus) | [<img src="https://avatars.githubusercontent.com/u/62214238?v=4" width=115 > <br> <sub> Brian3720 </sub>](https://github.com/Brian3720) |  [<img src="https://avatars.githubusercontent.com/u/125135703?v=4" width=115 > <br> <sub> Silvaadryan </sub>](https://github.com/Silvaadryan) | [<img src="https://avatars.githubusercontent.com/u/142240208?v=4" width=115 > <br> <sub> DaviFariass </sub>](https://github.com/DaviFariass) | [<img src="https://avatars.githubusercontent.com/u/142240746?v=4" width=115 > <br> <sub> GustavSilvDev </sub>](https://github.com/GustavSilvDev) | [<img src="https://avatars.githubusercontent.com/u/92280255?v=4" width=115 > <br> <sub> AlG1601 </sub>](https://github.com/AlG1601) |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Gabriel Franco | Samuel Conceição | Brian Matos | Adryan André | Davi Farias | Gustavo Silva | Guilherme Alefe |
+| [<img src="https://avatars.githubusercontent.com/u/89610183?s=400&u=e0a910f1089b47ec21e23fb01ea1d32d12e7e288&v=4" width=115 > <br> <sub> GabrieloFranco </sub>](https://github.com/GabrieloFranco) | [<img src="https://avatars.githubusercontent.com/u/142240522?s=400&v=4" width=115 > <br> <sub> SamDevFocus </sub>](https://github.com/SamDevFocus) | [<img src="https://avatars.githubusercontent.com/u/62214238?v=4" width=115 > <br> <sub> Brian3720 </sub>](https://github.com/Brian3720) |  [<img src="https://avatars.githubusercontent.com/u/125135703?v=4" width=115 > <br> <sub> Silvaadryan </sub>](https://github.com/Silvaadryan) | [<img src="https://avatars.githubusercontent.com/u/142240208?v=4" width=115 > <br> <sub> DaviFariass </sub>](https://github.com/DaviFariass) | [<img src="https://avatars.githubusercontent.com/u/142240746?v=4" width=115 > <br> <sub> GustavSilvDev </sub>](https://github.com/GustavSilvDev) | [<img src="https://avatars.githubusercontent.com/u/92280255?v=4" width=115 > <br> <sub> AlG1601 </sub>](https://github.com/AlG1601) | [<img src="https://avatars.githubusercontent.com/u/142240630?v=4" width=115 > <br> <sub> GuilhermeCruz08 </sub>](https://github.com/GuilhermeCruz08) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Gabriel Franco | Samuel Conceição | Brian Matos | Adryan André | Davi Farias | Gustavo Silva | Guilherme Alefe | Guilherme Cruz |
 
 ## Fique Ligado!
 
