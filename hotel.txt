@@ -9,7 +9,10 @@ Depois disso... De acordo com cada uma das solicitações abaixo, adapte o progr
 Ao acessar o sistema, pergunte o nome do Hotel e diga "O nome do hotel é {Hotel}".
 
 Ao acessar o sistema, pergunte o nome do usuário e uma senha. O nome do usuário não precisa de validação. A senha deve ser 2678.  
+
 Na função "inicio", utilize escolha/caso (switch/case) para validar a opção escolhida pelo do usuário.
+
+
 Sempre que o usuário acessar o sistema, diga "Bem vindo ao Hotel {Hotel}, {Nome}. É um imenso prazer ter você por aqui!".
 Substituir a expressão {Hotel} pelo nome do hotel informado pelo usuário em todos os pontos do código.
 Substituir a expressão {Nome} pelo nome do usuário informado pelo usuário em todos os pontos do código.
