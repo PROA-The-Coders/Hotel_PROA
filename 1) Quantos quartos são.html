@@ -17,6 +17,9 @@
 
             if (resposta.toLowerCase() !== "sim") {
                 continuar = false;
+                if (resposta.toLowerCase() === "não"){
+                    inicio() //Area para voltar para inicio
+                }
             }
         }
 
@@ -41,8 +44,18 @@
             }
 
             var custoFinalEstadia = diasEstadia * definirValorDiaria;
-            alert("O custo total da estadia é: R$" + custoFinalEstadia);
+            alert("O custo total da estadia é: R$" + custoFinalEstadia.toFixed(2));
         }
+
+        /* 3) O próximo passo é perguntar se o usuário confirma a reserva. Caso não aceite, volte ao menu inicial. 
+
+        "Ainda não implementei a função porque estou pensando sobre a melhor abordagem a seguir. Estou considerando 
+        se devo integrá-la à área de cadastro de usuários ou se devo criar uma funcionalidade independente que permita inserir o 
+        valor diretamente na área de cadastrados.
+        
+        Note: SamDevFocus
+        */
+
     </script>
 </body>
 

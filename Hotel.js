@@ -208,29 +208,6 @@ function sair() {
 
 		 sistema_cadastrar_hospedes();  */
 
-		 var definirValorDiaria = parseFloat(prompt("Qual o valor da diária?"));
-
-		 if (isNaN(definirValorDiaria) || definirValorDiaria <= 0) {
-		   alert("Valor da diária inválido.");
-		   return;
-		 }
-		 
-		 var diasEstadia = parseFloat(prompt("Quantos dias de estadia?"));
-		 
-		 if (isNaN(diasEstadia) || diasEstadia <= 0) {
-		   alert("Valor de dias de estadia inválido.");
-		   return;
-		 }
-		 
-		 if (diasEstadia >= 30) {
-		   alert("Limite de dias excedido. Use um valor menor que 30.");
-		   return;
-		 }
-		 
-		 var custoFinalEstadia = diasEstadia * definirValorDiaria;
-		 alert("O custo total da estadia é: R$" + custoFinalEstadia);
-
-// aqui poderia ser uma function para chamar a area de cadastro de usuario ATT
 
 
 
