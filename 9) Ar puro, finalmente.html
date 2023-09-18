@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Ar puro, finalmente.</title>
+
+    <script>
+
+function criarEmpresa(nome, valorServico, quantidadeAparelhos, porcentagemDesconto) {
+    return {
+        nome: nome,
+        valorServico: parseFloat(valorServico),
+        quantidadeAparelhos: parseInt(quantidadeAparelhos),
+        porcentagemDesconto: parseFloat(porcentagemDesconto)
+    };
+}
+
+function calcularValorComDesconto(empresa) {
+    var valorTotal = empresa.valorServico * empresa.quantidadeAparelhos;
+    var desconto = (empresa.porcentagemDesconto / 100) * valorTotal;
+    var valorComDesconto = valorTotal - desconto;
+    return valorComDesconto;
+}
+
+function calcularValorSemDesconto(empresa) {
+    return empresa.valorServico * empresa.quantidadeAparelhos;
+}
+
+var empresas = [];
+var menorValor = Infinity;
+var empresaMenorValor = null;
+
+while (true) {
+    var nome = prompt("Qual é o nome da empresa?");
+    var valor_servico = parseFloat(prompt("Qual é o valor de serviço por aparelho?"));
+    var quantidade_aparelhos = parseInt(prompt("Quantos aparelhos serão necessários para reparo?"));
+    var porcentagem_desconto = parseFloat(prompt("Qual é a porcentagem de desconto?"));
+    var quantidade_minima = parseInt(prompt("Qual é a quantidade mínima de aparelhos para fornecer desconto?"));
+
+    var empresa = criarEmpresa(nome, valor_servico, quantidade_aparelhos, porcentagem_desconto);
+    empresas.push(empresa);
+
+    var valorTotal;
+    if (empresa.quantidadeAparelhos >= quantidade_minima) {
+        valorTotal = calcularValorComDesconto(empresa);
+    } else {
+        valorTotal = calcularValorSemDesconto(empresa);
+    }
+
+    if (valorTotal < menorValor) {
+        menorValor = valorTotal;
+        empresaMenorValor = empresa.nome;
+    }
+
+    var continuar = prompt("Deseja informar novos dados? (S/N)").toUpperCase();
+    if (continuar !== "S") {
+        break;
+    }
+}
+
+if (empresaMenorValor !== null) {
+    alert("O orçamento de menor valor é o da empresa " + empresaMenorValor + " por R$ " + menorValor.toFixed(2));
+} else {
+    alert("Nenhuma empresa encontrada.");
+}
+
+    </script>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
