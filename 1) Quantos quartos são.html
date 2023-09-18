@@ -9,45 +9,78 @@
 
 <body>
     <script>
-        var continuar = true;
 
-        while (continuar) {
-            estadiaCalc();
-            var resposta = prompt("Deseja calcular o custo de outra estadia? (sim / não)");
-
-            if (resposta.toLowerCase() !== "sim") {
-                continuar = false;
-                if (resposta.toLowerCase() === "não"){
-                    inicio() //Area para voltar para inicio
+        function reserva() {
+            var valor_da_diaria = parseFloat(prompt("Qual o valor padrão da diaria ? "))
+            var dias_de_hospedagem = parseFloat(prompt("Quantas diarias serão necessarias ? "))
+            var calculo = (dias_de_hospedagem * valor_da_diaria)
+            if (valor_da_diaria <= 0 && dias_de_hospedagem <= 0 || dias_de_hospedagem > 30) {
+                alert("valor ivalido, tente novamente")
+                reserva()
+            }
+            else if (calculo) {
+                alert(` o valor de ${dias_de_hospedagem} diarias é de R$${calculo} `)
+                reserva_2()
+            }
+            else {
+                reserva_2()
+            }
+        }
+        function reserva_2() {
+            var nome_hospede = prompt("Qual o nome do hospede ?")
+            var confirma = confirm('Você deseja reservar ?');
+            if (confirma) {
+                alert(`Muito obrigado ${nome_hospede}`)
+                sistema_cadastrar_hospedes()
+            } else {
+                alert(`${nome_hospede}, reserva não efetuada   `)
+                sistema_cadastrar_hospedes();
+            }
+        }
+        
+        
+        
+        /* codigo do samuel caso o de cima de errado */
+        /*  var continuar = true;
+    
+            while (continuar) {
+                estadiaCalc();
+                var resposta = prompt("Deseja calcular o custo de outra estadia? (sim / não)");
+    
+                if (resposta.toLowerCase() !== "sim") {
+                    continuar = false;
+                    if (resposta.toLowerCase() === "não"){
+                        inicio() //Area para voltar para inicio
+                    }
                 }
             }
-        }
+    
+            function estadiaCalc() {
+                var definirValorDiaria = parseFloat(prompt("Qual o valor da diária?"));
+    
+                if (isNaN(definirValorDiaria) || definirValorDiaria <= 0) {
+                    alert("Valor da diária inválido. Por favor, insira um valor válido.");
+                    return;
+                }
+    
+                var diasEstadia = parseFloat(prompt("Quantos dias de estadia?"));
+    
+                if (isNaN(diasEstadia) || diasEstadia <= 0) {
+                    alert("Valor de dias de estadia inválido. Por favor, insira um valor válido.");
+                    return;
+                }
+    
+                if (diasEstadia >= 30) {
+                    alert("Limite de dias excedido. Use um valor menor que 30.");
+                    return;
+                }
+    
+                var custoFinalEstadia = diasEstadia * definirValorDiaria;
+                alert("O custo total da estadia é: R$" + custoFinalEstadia.toFixed(2));
+            } */
 
-        function estadiaCalc() {
-            var definirValorDiaria = parseFloat(prompt("Qual o valor da diária?"));
 
-            if (isNaN(definirValorDiaria) || definirValorDiaria <= 0) {
-                alert("Valor da diária inválido. Por favor, insira um valor válido.");
-                return;
-            }
-
-            var diasEstadia = parseFloat(prompt("Quantos dias de estadia?"));
-
-            if (isNaN(diasEstadia) || diasEstadia <= 0) {
-                alert("Valor de dias de estadia inválido. Por favor, insira um valor válido.");
-                return;
-            }
-
-            if (diasEstadia >= 30) {
-                alert("Limite de dias excedido. Use um valor menor que 30.");
-                return;
-            }
-
-            var custoFinalEstadia = diasEstadia * definirValorDiaria;
-            alert("O custo total da estadia é: R$" + custoFinalEstadia.toFixed(2));
-        }
-
-        /* 3) O próximo passo é perguntar se o usuário confirma a reserva. Caso não aceite, volte ao menu inicial. 
+        /* 3) O próximo passo é perguntar se o usuário confirma a reserva. Caso não aceite, volte ao menu inicial.
 
         "Ainda não implementei a função porque estou pensando sobre a melhor abordagem a seguir. Estou considerando 
         se devo integrá-la à área de cadastro de usuários ou se devo criar uma funcionalidade independente que permita inserir o 
