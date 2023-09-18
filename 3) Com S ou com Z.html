@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+var max_cadastros = 15;
+var hospedes = [];
+
+function cadastrarHospede() {
+    if (hospedes.length >= max_cadastros) {
+        alert("Máximo de cadastros atingido");
+        return;
+    }
+
+    var nome = prompt("Qual o nome do Hóspede?");
+    hospedes.push(nome);
+    alert(`Hóspede ${nome} foi cadastrado com sucesso!`);
+}
+
+function pesquisarHospede() {
+    const nome = prompt("Qual o nome do Hóspede?");
+    if (hospedes.includes(nome)) {
+        alert(`Hóspede ${nome} foi encontrado!`);
+    } else {
+        alert(`Hóspede ${nome} não foi encontrado!`);
+    }
+}
+
+function listarHospedes() {
+    hospedes.forEach((nome, index) => {
+        alert(`Hóspede ${index + 1}: ${nome}`);
+    });
+}
+
+while (true) {
+    const opcao = prompt("Selecione uma opção: 1. Cadastrar - 2. Pesquisar - 3. Listar - 4. Sair");
+    
+    switch (opcao) {
+        case "1":
+            cadastrarHospede();
+            break;
+        case "2":
+            pesquisarHospede();
+            break;
+        case "3":
+            listarHospedes();
+            break;
+        case "4":
+            alert("Saindo do programa.");
+            process.exit(0); // Isso encerrará o programa
+        default:
+            alert("Opção inválida. Tente novamente.");
+    }
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
