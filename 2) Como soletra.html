@@ -1,9 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      reserva();
+      function reserva() {
+        var nome_de_usuario = prompt("Qual o nome do usuario?");
+        valorDiaria = parseInt(prompt("Qual o valor da diária?"));
+
+        while (isNaN(valorDiaria) || valorDiaria <= 0) {
+          alert("Por favor, insira um valor válido");
+          valorDiaria = parseInt(prompt("Qual o valor da diária?"));
+        }
+
+        var quantia_diaria = parseInt(
+          prompt("Quantas diárias serão necessárias?")
+        );
+
+        while (
+          isNaN(quantia_diaria) ||
+          quantia_diaria <= 0 ||
+          quantia_diaria > 30
+        ) {
+          alert("Por favor, insira um valor válido");
+          quantia_diaria = parseInt(
+            prompt("Quantas diárias serão necessárias?")
+          );
+        }
+
+        var totalDiario = valorDiaria * quantia_diaria;
+        alert(
+          "O valor de " +
+            quantia_diaria +
+            " dias de hospedagem é de R$" +
+            totalDiario
+        );
+
+        var nome_do_hospede = prompt("Qual o nome do hóspede?");
+
+        var confirmacao_reserva = prompt(
+          nome_de_usuario +
+            ", você confirma a hospedagem para " +
+            nome_do_hospede +
+            " por " +
+            quantia_diaria +
+            " dias? S/N"
+        );
+
+        while (
+          confirmacao_reserva.toUpperCase() !== "S" &&
+          confirmacao_reserva.toUpperCase() !== "N"
+        ) {
+          alert("Por favor, insira S para confirmar ou N para cancelar.");
+          confirmacao_reserva = prompt(
+            nome_de_usuario +
+              ", você confirma a hospedagem para " +
+              nome_do_hospede +
+              " por " +
+              quantia_diaria +
+              " dias? S/N"
+          );
+        }
+
+        if (confirmacao_reserva.toUpperCase() === "S") {
+          alert(
+            nome_de_usuario +
+              ", reserva efetuada para " +
+              nome_do_hospede +
+              ". O valor total é de R$" +
+              totalDiario
+          );
+          reserva();
+        } else {
+          alert(nome_de_usuario + ", reserva não efetuada");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
+
 <!-- "Minha ideia é armazenar todos os registros de hóspedes em um array, 
     usando o nome ou alguma referência da pessoa como identificador. Isso permitirá que, ao 
     buscar 'hóspede mãe do Renan', eu possa acessar todas as informações cadastradas relacionadas 
     a essa pessoa através desse nome como chave no array." -->
 
-    <!-- a base do programa de pesquisar cadastrar ospedes já esta feita em Hotel.js linha 127 a 209 -->
+<!-- a base do programa de pesquisar cadastrar ospedes já esta feita em Hotel.js linha 127 a 209 -->
 
 <!-- perguntar se ele vai usar garagem e qual combustivel ele usa alcool ou gasolina para comprementar a parte: 8) álcool ou gasolina -->
 

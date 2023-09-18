@@ -1,15 +1,6 @@
 // 1ª parte: boas vindas ao usuário e verificação da senha de acesso
 
-var lista_hospedes = [
-  "Guilherme Cruz",
-  "Davi Farias",
-  "Gabriel Fraco",
-  "Adryan André",
-  "Guilherme Alefe",
-  "Brian Lima",
-  "Samuel Conceição",
-  "Gustavo Silva",
-];
+var lista_hospedes = ["Gabriel Augusto", "Roberto Gómez Bolaños", "María Antonieta de las Nieves", "Hector Bonilha", "Carlos Villagrán", "Ramón Valdés"];
 
 var nome_hotel;
 
@@ -21,7 +12,7 @@ function login() {
   var nome_hotel = prompt("insira o nome do hotel:");
   alert(`O nome do hotel é ${nome_hotel}`);
 
-  var nome = prompt("insira seu nome:");
+  var nome = prompt("insira seu nome:"); /* nome do cliente */
 
   var senha = prompt("Digite sua senha:");
   if (senha !== senhaCorreta) {
@@ -39,21 +30,22 @@ function inicio() {
     `Bem vindo ao Hotel ${nome_hotel}, ${nome}. É um imenso prazer ter você por aqui!`
   );
 
+
   while (true) {
     // adicionar todos os nomes no menu
 
     var menu = parseInt(
       prompt(
         "Escolha uma opção:\n" +
-          "1- opção\n" +
-          "2- opção\n" +
-          "3- opção\n" +
-          "4. opção\n" +
-          "5. opção\n" +
-          "6. opção\n" +
-          "7. opção\n" +
-          "8. opção\n" +
-          "9. opção\n" +
+          "01- Reserva\n" +
+          "02- opção\n" +
+          "03- opção\n" +
+          "04. opção\n" +
+          "05. opção\n" +
+          "06. opção\n" +
+          "07. opção\n" +
+          "08. opção\n" +
+          "09. opção\n" +
           "10. opção\n" +
           "11. opção\n" +
           "12. opção\n" +
@@ -64,7 +56,7 @@ function inicio() {
 
     switch (menu) {
       case 1:
-        reserva_diaria();
+        reserva();
         break;
       case 2:
         var_2();

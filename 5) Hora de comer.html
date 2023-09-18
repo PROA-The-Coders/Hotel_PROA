@@ -1,0 +1,55 @@
+<!-- adryan esta fazendo esta parte  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+buffet();
+
+function buffet() {
+    var quantidade_de_convidados = parseInt(prompt("Qual o número de convidados para o evento?"));
+
+    if (quantidade_de_convidados > 350) {
+        alert("Quantidade de convidados superior à capacidade máxima.");
+    } else {
+        var litrosCafe = quantidade_de_convidados * 0.2;
+        var litrosAgua = quantidade_de_convidados * 0.5;
+        var salgadosPorPessoa = 7;
+        var totalSalgados = quantidade_de_convidados * salgadosPorPessoa;
+
+        const cafe = 0.80;
+        const  agua = 0.40;
+        const  precoSalgados = 34;
+
+        var custoTotalComida = (litrosCafe * cafe) + (litrosAgua * agua) + (totalSalgados / 100 * precoSalgados);
+
+        alert("O evento precisará de:\n" + litrosCafe.toFixed(2) + " litros de café,\n" + litrosAgua.toFixed(2) + " litros de água,\n" + totalSalgados + " salgados. \n O custo total do evento será de R$ " + custoTotalComida.toFixed(2));
+
+        var resposta = prompt("Gostaria de efetuar a reserva? S/N").toUpperCase();
+
+        if (resposta === "S") {
+            var nome = prompt("Qual é o seu nome?");
+            alert(nome + ", reserva efetuada com sucesso.");
+        }
+    }
+}
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

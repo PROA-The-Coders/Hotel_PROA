@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditorio para quantos?</title>
+</head>
+<body>
+    
+
+    <script>
+// Solicita ao usuário o número de convidados para o evento
+var convidados = parseInt(prompt("Qual o número de convidados para o seu evento?"));
+
+// Verifica se o número de convidados é válido
+if (convidados < 0 || convidados > 350) {
+    alert("Número de convidados inválido");
+} else {
+    // Calcula a capacidade restante no auditório Laranja (considerando as cadeiras adicionais)
+    var capacidadeLaranja = 150 + 70;
+    var cadeirasAdicionaisLaranja = Math.max(0, convidados - capacidadeLaranja);
+
+    // Verifica qual auditório é o mais adequado
+    if (convidados <= 150) {
+        alert("Use o auditório Laranja");
+    } else if (convidados <= 350) {
+        alert("Use o auditório Colorado");
+    } else {
+        alert("Quantidade de convidados superior à capacidade máxima");
+    }
+
+    // Se o auditório Laranja for escolhido e cadeiras adicionais forem necessárias
+    if (cadeirasAdicionaisLaranja > 0) {
+        var respostaReserva = prompt("Gostaria de efetuar a reserva? (S/N)").toUpperCase();
+        if (respostaReserva === "S") {
+            var nome = prompt("Por favor, insira seu nome:");
+            alert(nome + ", reserva efetuada com sucesso. Serão necessárias " + cadeirasAdicionaisLaranja + " cadeiras adicionais no auditório Laranja.");
+        } else {
+            alert("Reserva não efetuada.");
+        }
+    }
+}
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+.'\__\'\__\'\__\'\__\'\__,`   .  ____ ___ \
+|\/ __\/ __\/ __\/ __\/ _:\   |`.  \  \___ \
+ \\'\__\'\__\'\__\'\__\'\_`.__|""`. \  \___ \
+  \\/ __\/ __\/ __\/ __\/ __:                \
+   \\'\__\'\__\'\__\ \__\'\_;-----------------`
+    \\/   \/   \/   \/   \/ :               hh|
+     \|______________________;________________|
+
+     que loucura

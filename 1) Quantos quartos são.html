@@ -9,34 +9,35 @@
 
 <body>
     <script>
-
-        function reserva() {
-            var valor_da_diaria = parseFloat(prompt("Qual o valor padrão da diaria ? "))
-            var dias_de_hospedagem = parseFloat(prompt("Quantas diarias serão necessarias ? "))
-            var calculo = (dias_de_hospedagem * valor_da_diaria)
-            if (valor_da_diaria <= 0 && dias_de_hospedagem <= 0 || dias_de_hospedagem > 30) {
-                alert("valor ivalido, tente novamente")
-                reserva()
-            }
-            else if (calculo) {
-                alert(` o valor de ${dias_de_hospedagem} diarias é de R$${calculo} `)
-                reserva_2()
-            }
-            else {
-                reserva_2()
-            }
-        }
-        function reserva_2() {
-            var nome_hospede = prompt("Qual o nome do hospede ?")
-            var confirma = confirm('Você deseja reservar ?');
-            if (confirma) {
-                alert(`Muito obrigado ${nome_hospede}`)
-                sistema_cadastrar_hospedes()
-            } else {
-                alert(`${nome_hospede}, reserva não efetuada   `)
-                sistema_cadastrar_hospedes();
-            }
-        }
+function reserva() {
+			var valor_da_diaria = parseFloat(prompt("Qual o valor padrão da diaria ? "))
+			var dias_de_hospedagem = parseFloat(prompt("Quantas diarias serão necessarias ? "))
+			var calculo = (dias_de_hospedagem * valor_da_diaria)
+			if (valor_da_diaria <= 0 && dias_de_hospedagem <= 0 || dias_de_hospedagem > 30) {
+				alert("valor ivalido, tente novamente")
+				reserva()
+			}
+			else if (calculo) {
+				alert(` o valor de ${dias_de_hospedagem} diarias é de R$${calculo} `)
+				reserva_2()
+			}
+			else {
+				reserva_2()
+			}
+		}
+		function reserva_2() {
+			var nome_hospede = prompt("Qual o nome do hospede ?")
+			
+			var resposta = prompt(' Você deseja reservar S/N ?');
+			if (resposta === "s") {
+				
+				alert(`Obrigado(A) pela preferencia ${nome_hospede}`)
+				inicio()
+			} else {
+				alert(`${nome_hospede}, reserva não efetuada   `)
+				inicio()
+			}
+		}
         
         
         

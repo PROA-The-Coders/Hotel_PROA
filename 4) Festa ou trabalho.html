@@ -1,3 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Festa ou trabalho?</title>
+    <script>
+
+        var numGarcons = parseFloat(prompt("Quantos garçons serão necessários?"));
+        var horasEv = parseFloat(prompt("Qual a duração do evento em horas?"));
+
+        var resultFinal = numGarcons * 10.50 * horasEv;
+
+        alert("Custo total: R$" + resultFinal.toFixed(2));
+
+        var confirmReserv = prompt("Gostaria de efetuar a reserva? S/N");
+
+        if (confirmReserv.toUpperCase() === "S") {
+            var yourName = prompt("Digite seu nome:");
+            alert(`Sua reserva foi efetuada com sucesso, ${yourName}. Valor final: R$${resultFinal.toFixed(2)}`);
+        } else {
+            alert("Reserva não efetuada.");
+        }
+
+
+
+        /*    const resposta = prompt("Gostaria de efetuar a reserva? S/N");
+     
+     if (resposta.toUpperCase() === "S") {
+       const nome = prompt("Digite seu nome:");
+       alert(reserva efetuada com sucesso.);
+     } else {
+       alert("Reserva não efetuada."); */
+
+
+
+
+
+
+
+
+
+
+
+        /* 4) Festa ou trabalho?
+        Neste cenário, o hotel receberá não hóspedes, mas eventos. 
+        Quando uma empresa contrata o hotel para eventos, são oferecidos garçons para servir os convidados. Considerando que cada garçom custa R$ 10,50 por 
+        hora, escreva um programa que receba o número de garçons necessários e o total de horas do evento. 
+        
+        Depois calcule o custo total que o hotel terá com a contratação desses profissionais e exiba o resultado em tela. 
+        
+        Por último, pergunte se o usuário aceita os valores. Se "S", exiba a mensagem "Reserva efetuada com sucesso". Caso contrário, exiba a mensagem 
+        "Reserva não efetuada."
+        
+        Exemplo:
+        Programa pergunta   =>  "Qual a duração do evento em horas?"
+        Resposta do usuário =>  8
+        Programa pergunta   =>  "Quantos garçons serão necessários?"
+        Resposta do usuário =>  4
+        Programa exibe         =>  "Custo total: R$ 336.0"
+        Programa pergunta   =>  "Gostaria de efetuar a reserva? S/N"
+        Resposta do usuário =>  S
+        Programa exibe          =>  "{Nome}, reserva efetuada com sucesso." */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- como isso vai trabalhar diretamente com datas pensei em fazer uma array que gurdace os cadastros de reserva para eventos 
 com isso ter area para perguntar a data que acho ecencial e não foi colocado pelo professor acho que vai fica bacana como 
 isso quando foir para cadastrar uma nova area se a data já for ocupada iria aparecer e pdoeria ao lado mostrar 
