@@ -8,7 +8,7 @@ var lista_hospedes = [
   "Carlos Villagrán",
   "Ramón Valdés",
 ];
- 
+
 login()
 
 function login() {
@@ -53,8 +53,9 @@ function inicio() {
         reserva_diaria();
         break;
       case 2:
-
-
+    }
+  } 
+}
 function inicio() {
   alert(`Bem vindo ao Hotel ${nome_hotel}, ${nome}. É um imenso prazer ter você por aqui!`);
 
@@ -112,7 +113,7 @@ function inicio() {
   }
 }
 
-/* 
+
 function reserva_diaria() {
   function erro() {
     alert("Por favor, informe um número entre 1 e 14.");
@@ -533,7 +534,7 @@ if (empresaMenorValor !== null) {
 } else {
   alert("Nenhuma empresa encontrada.");
 }
- */
+
 
 
 
